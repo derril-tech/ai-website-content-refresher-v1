@@ -2,8 +2,6 @@
 
 **with LangGraph + AI**
 
-🌐 **See the Live Application**: https://ai-website-content-refresher-web.vercel.app/
-
 An AI-powered content management platform that audits your website, generates SEO-optimized and accessibility-compliant content, runs A/B experiments, and ships changes via Git PRs or CMS drafts—all while staying true to your brand voice and guidelines.
 
 ## ✨ What is RefreshFlow AI?
@@ -175,27 +173,7 @@ RefreshFlow AI uses **LangGraph** as the primary orchestrator for deterministic,
 - **Reduced compliance risk**: Citation-backed claims and approval workflows
 - **Team efficiency**: Free content teams from repetitive tasks to focus on strategy
 
-
-## 🚀 Deployment
-
-### Frontend (Vercel)
-Automatic deployment via GitHub integration. Configure environment variables in Vercel dashboard:
-- `NEXT_PUBLIC_API_URL`: Backend API endpoint
-- `NEXT_PUBLIC_WS_URL`: WebSocket endpoint
-
-### Backend (Railway/Render)
-Deploy from GitHub with automatic Docker builds. Required environment variables:
-- `DATABASE_URL`: PostgreSQL connection string with pgvector
-- `REDIS_URL`: Redis connection string
-- `OPENAI_API_KEY`: OpenAI API key (optional fallback)
-- `JWT_SECRET`: Secret for token signing
-
-### Database Migrations
-```bash
-cd apps/api
-alembic upgrade head    # Apply migrations
-alembic revision --autogenerate -m "description"  # Create migration
-```
+---
 
 ## 📚 Documentation & Resources
 
